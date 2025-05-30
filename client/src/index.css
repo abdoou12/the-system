@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600&display=swap');
+
+:root {
+  --background: 15 10% 8%; /* #0f0f23 */
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 256 74% 13%; /* #1a0b2e */
+  --primary-light: 276 86% 39%; /* #7209b7 */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 51 100% 50%; /* #ffd700 */
+  --secondary-foreground: 240 10% 3.9%;
+  --accent: 193 100% 50%; /* #00d4ff */
+  --accent-foreground: 240 10% 3.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+  --chart-1: 276 86% 39%;
+  --chart-2: 193 100% 50%;
+  --chart-3: 51 100% 50%;
+  --chart-4: 0 84% 60%;
+  --chart-5: 142 76% 36%;
+  
+  /* Custom game colors */
+  --dark: 240 21% 15%; /* #0f0f23 */
+  --dark-light: 240 10% 18%; /* #1e1e2e */
+  --health: 0 73% 41%; /* #dc2626 */
+  --xp: 221 83% 53%; /* #3b82f6 */
+  --success: 158 64% 52%; /* #059669 */
+}
+
+.dark {
+  --background: 15 10% 8%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 256 74% 13%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 51 100% 50%;
+  --secondary-foreground: 240 10% 3.9%;
+  --accent: 193 100% 50%;
+  --accent-foreground: 240 10% 3.9%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-dark text-foreground;
+  }
+}
+
+@layer utilities {
+  .font-orbitron {
+    font-family: 'Orbitron', monospace;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+  
+  .bg-primary {
+    background-color: hsl(var(--primary));
+  }
+  
+  .bg-primary-light {
+    background-color: hsl(var(--primary-light));
+  }
+  
+  .bg-secondary {
+    background-color: hsl(var(--secondary));
+  }
+  
+  .bg-accent {
+    background-color: hsl(var(--accent));
+  }
+  
+  .bg-dark {
+    background-color: hsl(var(--dark));
+  }
+  
+  .bg-dark-light {
+    background-color: hsl(var(--dark-light));
+  }
+  
+  .text-primary-light {
+    color: hsl(var(--primary-light));
+  }
+  
+  .text-secondary {
+    color: hsl(var(--secondary));
+  }
+  
+  .text-accent {
+    color: hsl(var(--accent));
+  }
+  
+  .text-health {
+    color: hsl(var(--health));
+  }
+  
+  .text-xp {
+    color: hsl(var(--xp));
+  }
+  
+  .text-success {
+    color: hsl(var(--success));
+  }
+  
+  .border-primary-light {
+    border-color: hsl(var(--primary-light));
+  }
+  
+  .border-secondary {
+    border-color: hsl(var(--secondary));
+  }
+  
+  .border-accent {
+    border-color: hsl(var(--accent));
+  }
+  
+  .border-health {
+    border-color: hsl(var(--health));
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px hsl(var(--primary-light));
+  }
+  to {
+    box-shadow: 0 0 20px hsl(var(--primary-light)), 0 0 30px hsl(var(--primary-light));
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--dark));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary-light));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent));
+}

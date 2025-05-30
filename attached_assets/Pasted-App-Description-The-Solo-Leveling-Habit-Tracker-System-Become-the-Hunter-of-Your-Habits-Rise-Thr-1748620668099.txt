@@ -1,0 +1,77 @@
+App Description: The "Solo Leveling Habit Tracker" System
+Become the Hunter of Your Habits, Rise Through the Ranks!
+
+The "Solo Leveling Habit Tracker" is a comprehensive, gamified personal development application designed to transform your daily routines and long-term goals into an engaging RPG-like experience. Inspired by the popular "Solo Leveling" manhwa, this system turns you into a "Hunter" of your own bad habits and a cultivator of powerful, positive ones. By consistently completing self-defined tasks, overcoming challenges, and reflecting on your progress, you'll level up your virtual persona, gain new abilities (stats), acquire titles, and conquer personal demons.
+
+Core Philosophy:
+Life is your ultimate dungeon, and your habits are the monsters or allies within it. This app provides the "System" to help you identify, track, and conquer your challenges, turning self-improvement into an adventure.
+
+Key Features:
+Gamified Task Management (Daily Tasks):
+
+Tiered Tasks: Define daily tasks across three tiers of difficulty and importance.
+Stat Gains: Completing tasks rewards specific attribute points (STR, INT, KNO, WIS, ENDU, FAITH) unique to each task, contributing to your character's development.
+XP & Leveling: Earn Experience Points (XP) for completing tasks, primarily Tier 1, allowing you to Level Up your Hunter. The XP required per level scales, making progression a continuous challenge.
+HP System: You have Health Points (HP) that decrease if you fail to complete all tasks within a tier (or specific tasks in later iterations). Reaching 0 HP might incur further penalties. Max HP increases upon leveling up, and HP is fully restored.
+Real-World Penalties: Missing specific Tier 1 or Tier 2 tasks can result in self-defined "real-world" penalties (e.g., "+30 min cardio," "extra hour of focused work"), which are logged and presented to you.
+Character Progression & Customization:
+
+Levels: The primary indicator of your overall progress and commitment.
+Attributes (Stats):
+STR (Strength): Represents physical discipline, exercise.
+INT (Intelligence): Represents mental work, learning, deep focus.
+KNO (Knowledge): Represents acquiring new information, reading, studying.
+WIS (Wisdom): Represents self-reflection, learning from mistakes (gained from Journaling).
+ENDU (Endurance): Represents discipline, avoiding negative habits, consistency.
+FAITH (Faith/Spirituality): Represents spiritual practices, prayer, meditation.
+Stats are gained from tasks, and Attribute Points earned on level-up can be spent to further boost these stats via the Status Window.
+Ranks: Achieve new Ranks (from Bronze to the ultimate "Abdou" 👑) as you reach significant level milestones, visually represented by icons.
+Titles: Earn prestigious Titles based on your level (e.g., "Rising Monarch," "Veteran Shadow," "Shadow Monarch") and by completing significant achievements, quests, dungeons, or defeating bosses (e.g., "Sloth-Slayer," "Gauntlet Survivor"). Unlocked titles are viewable.
+Rewards & Economy:
+
+Gold Currency: Earn Gold by completing all daily tasks ("Perfect Day") and as rewards from Quests, Dungeons, Bosses, and the Daily Spin.
+Shop System ("Hunter's Emporium"):
+Spend Gold to purchase items.
+Consumables: HP Potions to restore health, timed Buff Scrolls (e.g., XP Boost for 24 hours).
+Real-World Permissions: "Buy" permissions for leisure activities (e.g., "Movie Night Permission," "+1 Hour Gaming Time").
+Special Items: Earn unique items like "Dungeon Tokens" from conquering Dungeons.
+Dynamic Events & Challenges:
+
+Daily Spin ("Wheel of Fate"): One spin per day with a chance to win:
+Gold bonuses.
+Instant XP boosts.
+A free common shop item (e.g., Small HP Potion).
+A "Blessing" or "Curse" card for the day (a random Daily Event with temporary positive or negative modifiers to XP, Gold, HP loss, or shop prices).
+A neutral "Nothing Special" outcome.
+Debuffs/Status Effects:
+Critical HP Fatigue: Activates if HP drops below 20%, reducing XP gain until HP is recovered.
+Tier 1 Neglect: Activates if all Tier 1 tasks are missed for 2 consecutive days, increasing HP loss from missed tasks until the streak is broken.
+Active debuffs are displayed in the Status window.
+Weekly Dungeon Challenge:
+One challenging, multi-objective "Dungeon" activates at the start of each week (e.g., "The Gauntlet of Discipline" requiring zero dopamine, multiple workouts, strict diet, and full prayers for 48 hours).
+A dedicated Dungeon Window shows objectives and a countdown timer (24-48 hours).
+Success Rewards: Large XP, Gold, Attribute Points, unique Titles (e.g., "Gauntlet Survivor"), and special items like "Dungeon Tokens."
+Failure Penalties: Severe consequences, such as HP dropping to 1, temporary XP gain disabled, Shop access locked for 24 hours, and logged real-world exercises.
+Skip Option: A "Skip Ticket" can be bought with Gold (e.g., 100 Gold) to bypass the dungeon for the week without rewards or penalties.
+Inner Demon Boss Fights:
+Personalized challenges triggered by consistently failing specific types of daily tasks (e.g., "Morgo, the Sloth Demon" from missing 3 early wake-ups; "Malphas, Whisperer of Doubt" from missing prayers; "Mammon's Shade" from missing work tasks).
+Once triggered, a Boss Fight becomes active for a set duration (e.g., 24 hours).
+A dedicated Boss Fight Window displays the Demon's name, its "defeat tasks" (specific remedial actions the user must take), and a countdown timer.
+Defeat Rewards: Gold and powerful unique Titles (e.g., "Sloth-Slayer," "Faith's Bastion," "Work's Revenge"). Defeating a boss also resets its specific trigger counter.
+Failure to defeat in time means the boss fades, but may reappear if the underlying negative habit persists.
+Tracking & Reflection:
+
+Journaling System:
+After submitting the day, a prompt appears for a quick journal entry: "What went well today?" and "What held you back / could be improved?"
+Saving a journal entry grants +1 WISDOM (WIS) stat.
+Journal entries are saved with their date.
+Daily History Log:
+Automatically records a summary of each day's activities for the last 7 days, including tasks completed/missed, HP/XP/Gold changes, and active Dungeon/Boss status.
+Viewable in a dedicated History window.
+System Event Log: A running log in the UI displays all significant system messages, rewards, penalties, and status changes in real-time.
+Achievements: Unlock a variety of achievements for milestones like reaching certain levels, streaks, completing specific numbers of tasks, prayers, journal entries, conquering dungeons, defeating bosses, and making first purchases.
+User Interface (Conceptual for Kivy, based on Tkinter implementation):
+
+Main Screen: Displays daily tasks (checkboxes), Hunter Rank/Level/Title/Gold, current Daily Spin Omen, XP bar, and main action buttons (Submit Day, Status, Shop, Quests, Dungeon/Boss, Daily Spin, History).
+Status Window: Shows detailed character stats (including WIS), current HP/Max HP, Level/XP, Gold, active Buffs, active Debuffs, active Dungeon Penalties, streaks, and unlocked Achievements. Allows spending of attribute points.
+Dedicated Windows: Separate, themed (eventually) windows for Shop, Quests, active Dungeons (with timer), active Boss Fights (with timer), Daily Spin, Journaling, and History.
